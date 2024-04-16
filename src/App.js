@@ -15,7 +15,7 @@ import {
 } from './styles';
 
 const App = () => {
-
+  const users = [{ id: Math.random(), name:"Frank", age:28}, { id: Math.random(), name:"Rodolfi", age:28}]
   return (
     <Container>
       <Image alt='logo-imagem' src={People} />
@@ -32,6 +32,14 @@ const App = () => {
           Cadastrar
           <img src={Arrow}></img>
           </Button>
+
+      <ul>
+        {users.map(user =>(
+          <li key={user.id}>
+            {user.name} - {user.age}
+          </li>
+        ))}
+      </ul>
       </ContainerItems>
     </Container>
 
