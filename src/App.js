@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react'
 
+import axios from 'axios'
+
 import People from './assets/people.svg'
 import Arrow from './assets/arrow.svg'
 import Trash from './assets/trash.svg'
