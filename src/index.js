@@ -1,13 +1,12 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App';
-import GlobalStyle from './globalStyle';
+import express from 'express';
+import { v4 } from 'uuid';
 
-const container = document.getElementById('root');
-const root = createRoot(container);
+const port = 3001;
+const app = express();
+app.use(express.json());
 
-root.render(
-  <>
-    <App /> <GlobalStyle />
-  </>, 
-);
+const user = [];
+
+const checkUserId = (request, response, next) => {
+  const {id} = request.params;
+}
